@@ -1,0 +1,12 @@
+<div *ngIf="notification"
+     [ngClass]="{
+         'isSuccess': notification.type === 'success',
+         'isError': notification.type === 'error'
+     }"
+    class="Notification u-paddingVertical-s text--bold">
+    <div class="Container Grid Grid--spaceBetween Grid--alignCenter">
+        <span>{{notification.message}}</span>
+        <i class="icon-fh-close text--14px Btn--pointer"
+           (click)="close();"></i>
+    </div>
+</div>
